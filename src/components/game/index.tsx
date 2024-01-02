@@ -107,8 +107,22 @@ const Game = () => {
 					</div>
 				:(
 					<>
-						<Timer theme="light" initialValue={value?.time} isStarted={isStarted} setIsStarted={setIsStarted} isTimeStopped={isTimeStopped} isEnded={isEnded} setCurrentTime={setCurrentTime} />
-						<Board data={results} setIsTimeStopped={setIsTimeStopped} isStarted={isStarted} setIsEnded={setIsEnded} setCurrentCards={setCurrentCards} />
+						<Timer
+							theme="light"
+							initialValue={value?.time}
+							isStarted={isStarted}
+							setIsStarted={setIsStarted}
+							isTimeStopped={isTimeStopped}
+							isEnded={isEnded}
+							setCurrentTime={setCurrentTime}
+						/>
+						<Board
+							data={results}
+							setIsTimeStopped={setIsTimeStopped}
+							isStarted={isStarted}
+							setIsEnded={setIsEnded}
+							setCurrentCards={setCurrentCards}
+						/>
 						<Outlet context={{ setIsTimeStopped, isEnded, scores: value?.scores || [] }}/>
 					</>
 				)
